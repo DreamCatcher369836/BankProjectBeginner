@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Accounts</title>
+</head>
+<body>
+    <h1>Accounts</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Account Number</th>
+            <th>Balance</th>
+            <th>Customer ID</th>
+        </tr>
+        {% for a in accounts %}
+        <tr>
+            <td>{{ a[0] }}</td>
+            <td>{{ a[1] }}</td>
+            <td>{{ a[2] }}</td>
+            <td>{{ a[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+</body>
+</html>
