@@ -47,6 +47,7 @@ def create_customer(conn, firstName, lastName, email):
     statement = """ INSERT INTO customer (firstName, lastName, email) VALUES (?, ?, ?) """
     cursor = conn.cursor()
     cursor.execute(statement, (firstName, lastName, email))
+    conn.commit()
     print("Customer added successfully!")
 
 
